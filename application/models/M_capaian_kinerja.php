@@ -2,11 +2,11 @@
 <?php
 defined('BASEPATH') or exit('No Direct script access allowed');
 
-class M_pegawai extends CI_Model
+class M_capaian_kinerja extends CI_Model
 {
 
-    var $table      = "tb_pegawai";
-    var $column     = array("", "nama", "nip_pegawai", "nama_jabatan", "unit_kerja");
+    var $table      = "tb_capaian_kerja";
+    var $column     = array("nama", "nama_jabatan");
     var $order      = array("nama" => "asc");
 
     public function __construct()
@@ -23,8 +23,9 @@ class M_pegawai extends CI_Model
     private function _get_datatables_query()
     {
         $this->db->select("*");
-        $this->db->from("tb_pegawai p");
-        $this->db->join("tb_jabatan j", "p.id_jabatan = j.id_jabatan", "left");
+        $this->db->from("tb_capaian_kerja ck");
+        $this->db->join("tb_pegawai p", "p.id_pegawai = ck.id_pegawai", "left");
+        $this->db->join("tb_jabatan j", "j.id_jabatan = p.id_jabatan", "left");
 
         $i      = 0;
 
@@ -46,17 +47,8 @@ class M_pegawai extends CI_Model
         }
     }
 
-    function getDetailPegawai($id_pegawai)
-    {
-        $this->db->select("*");
-        $this->db->from("tb_pegawai");
-        $this->db->where("id_pegawai", $id_pegawai);
 
-        return $this->db->get()->row();
-    }
-
-
-    function loadDataPegawaiDatatables()
+    function loadDataCapaianKinerjaDatatables()
     {
         $this->_get_datatables_query();
 
@@ -84,10 +76,20 @@ class M_pegawai extends CI_Model
         return $this->db->count_all_results();
     }
 
-    public function loadPegawaiList()
+    public function loadJabatanList()
     {
-        $this->_get_datatables_query();
+        $this->db->select("*");
+        $this->db->from($this->table);
 
         return $this->db->get()->result();
+    }
+
+    public function getDetailJabatan($id_jabatan)
+    {
+        $this->db->select("*");
+        $this->db->from("tb_jabatan");
+        $this->db->where("id_jabatan", $id_jabatan);
+
+        return $this->db->get()->row();
     }
 }

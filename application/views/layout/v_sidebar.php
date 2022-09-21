@@ -27,6 +27,11 @@
             <p>Jabatan</p>
           </a>
         </li>
+        <li class='nav-item'>
+          <a href="<?= base_url('index.php/CapaianKinerja'); ?>" class="nav-link <?= $this->router->fetch_class() == 'CapaianKinerja' ? 'active' : ''; ?>">
+            <p>Capaian Kinerja</p>
+          </a>
+        </li>
         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
         <?php

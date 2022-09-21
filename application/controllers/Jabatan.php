@@ -74,7 +74,7 @@ class Jabatan extends CI_Controller
 
         $insert             = $this->M_crud->insert("tb_jabatan", $data);
 
-        if($insert){
+        if ($insert) {
             $response_status        = "success";
             $response_message       = "Berhasil menambahkan Jabatan";
         } else {
@@ -105,7 +105,7 @@ class Jabatan extends CI_Controller
 
         $update             = $this->M_crud->update("tb_jabatan", $data, $where);
 
-        if($update){
+        if ($update) {
             $response_status        = "success";
             $response_message       = "Berhasil mengedit Jabatan";
         } else {
@@ -126,8 +126,7 @@ class Jabatan extends CI_Controller
 
         $jabatan        = $this->M_jabatan->getDetailJabatan($id_jabatan);
 
-        if($jabatan)
-        {
+        if ($jabatan) {
             $response_data      = $jabatan;
             $response_status    = "success";
             $response_message   = "Successfully";
@@ -154,8 +153,7 @@ class Jabatan extends CI_Controller
 
         $delete     = $this->M_crud->delete("tb_jabatan", $where);
 
-        if($delete)
-        {
+        if ($delete) {
             $response_status        = "success";
             $response_message       = "Berhasil menghapus Data Jabatan";
         } else {

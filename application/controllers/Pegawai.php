@@ -82,7 +82,7 @@ class Pegawai extends CI_Controller
 
         $insert             = $this->M_crud->insert("tb_pegawai", $data);
 
-        if($insert){
+        if ($insert) {
             $response_status        = "success";
             $response_message       = "Berhasil menambahkan Pegawai";
         } else {
@@ -121,7 +121,7 @@ class Pegawai extends CI_Controller
 
         $update             = $this->M_crud->update("tb_pegawai", $data, $where);
 
-        if($update){
+        if ($update) {
             $response_status        = "success";
             $response_message       = "Berhasil mengedit Pegawai";
         } else {
@@ -142,8 +142,7 @@ class Pegawai extends CI_Controller
 
         $pegawai        = $this->M_pegawai->getDetailPegawai($id_pegawai);
 
-        if($pegawai)
-        {
+        if ($pegawai) {
             $response_data      = $pegawai;
             $response_status    = "success";
             $response_message   = "Successfully";
@@ -170,8 +169,7 @@ class Pegawai extends CI_Controller
 
         $delete     = $this->M_crud->delete("tb_pegawai", $where);
 
-        if($delete)
-        {
+        if ($delete) {
             $response_status        = "success";
             $response_message       = "Berhasil menghapus Data Pegawai";
         } else {
@@ -193,6 +191,19 @@ class Pegawai extends CI_Controller
 
         foreach ($jabatan as $item) {
             $result .= "<option value='$item->id_jabatan'>$item->nama_jabatan</option>";
+        }
+
+        echo $result;
+    }
+
+    function loadPegawaiListOption()
+    {
+        $pegawai           = $this->M_pegawai->loadPegawaiList();
+
+        $result     = "<option value=''>-- Pilih Pegawai --</option>";
+
+        foreach ($pegawai as $item) {
+            $result .= "<option value='$item->id_pegawai'>$item->nama</option>";
         }
 
         echo $result;
