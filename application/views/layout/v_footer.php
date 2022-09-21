@@ -2,10 +2,10 @@
 <footer class="main-footer">
   <!-- To the right -->
   <div class="float-right d-none d-sm-inline">
-    Accounting Storage System
+    Sistem Perhitungan TPP
   </div>
   <!-- Default to the left -->
-  <strong>IT Dept &copy; 2022
+  <strong>Kecamatan Setu
 </footer>
 </div>
 <!-- ./wrapper -->

@@ -22,9 +22,9 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-        <div class="row">
+            <div class="row">
                 <div class="col-12">
-                    <div class="card card-primary card-outline">
+                    <div class="card card-success card-outline">
                         <form action="#" id="jabatanForm" method="post" target="_blank">
                             <div class="card-body">
                                 <div class="row">
@@ -61,7 +61,7 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="card card-primary card-outline">
+                    <div class="card card-success card-outline">
                         <div class="card-header">
                             <div class="card-title">
                                 Daftar Jabatan
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            
+
                             <div class="row">
                                 <div class="col-12">
                                     <table id="tableJabatan" class="table table-bordered table-striped">

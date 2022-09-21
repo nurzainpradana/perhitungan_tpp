@@ -10,17 +10,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
     <?php
-    $page_titles    = "Acc Storage System";
+    $page_titles    = "Perhitungan TPP";
 
     if (isset($page_title)) {
-      $page_titles    = $page_title . " | Acc Storage System";
+      $page_titles    = $page_title . " | Perhitungan TPP";
     }
 
     echo $page_titles;
     ?>
   </title>
 
-  <link rel="icon" href="<?= base_url() ?>/assets/dist/img/ykk3.png" type="image/gif">
+  <link rel="icon" href="<?= base_url() ?>/assets/dist/img/bekasi.png" type="image/gif">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -87,8 +87,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- JQuery Ballon -->
   <script src="<?= base_url(); ?>/assets/dist/js/jquery-ballon/jquery-ballon.js"></script>
 
-  <script src="<?= base_url();?>/assets/js/sweetalert2.js"></script>
-  <link rel="stylesheet" href="<?= base_url();?>/assets/dist/css/sweetalert.css"/>
+  <script src="<?= base_url(); ?>/assets/js/sweetalert2.js"></script>
+  <link rel="stylesheet" href="<?= base_url(); ?>/assets/dist/css/sweetalert.css" />
 
 
 
